@@ -1,3 +1,5 @@
+![brand](https://github.com/UA-CALES-SPLS-AGI/smrt-dashboard/blob/main/public/og-image.png)
+
 # SMRT Link Instrument Dashboard
 
 A real-time monitoring dashboard for **PacBio Revio** sequencing instruments, built as a static Next.js app that talks directly to the SMRT Link REST API from the browser.
@@ -20,11 +22,15 @@ A real-time monitoring dashboard for **PacBio Revio** sequencing instruments, bu
 - **Fully static export** — no server, no database; all settings stored in localStorage. Deploy anywhere you can serve HTML.
 - **Apache-ready** — ships with a sample Apache HTTPD reverse-proxy config
 
+## Screenshot
+
+![Screenshot](https://github.com/user-attachments/assets/df1e70d2-0b84-473f-b382-288d79704503)
+
 ## Architecture
 
 ```
 ┌──────────────┐         ┌──────────────────┐        ┌───────────────┐
-│   Browser    │──GET───▶│  Apache HTTPD    │──proxy─▶│  SMRT Link    │
+│   Browser    │──GET───▶│  Apache HTTPD    │─proxy─▶│  SMRT Link    │
 │  (static JS) │◀──JSON──│  /smrtlink-api/  │◀───────│  :9091        │
 └──────────────┘         └──────────────────┘        └───────────────┘
         ▲
